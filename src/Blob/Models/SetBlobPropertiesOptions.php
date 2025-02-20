@@ -45,7 +45,7 @@ class SetBlobPropertiesOptions extends BlobServiceOptions
      *
      * @param BlobProperties $blobProperties The blob properties instance.
      */
-    public function __construct(BlobProperties $blobProperties = null)
+    public function __construct(BlobProperties|null $blobProperties = null)
     {
         parent::__construct();
         $this->_blobProperties = is_null($blobProperties)
@@ -187,9 +187,9 @@ class SetBlobPropertiesOptions extends BlobServiceOptions
     /**
      * Gets ContentMD5.
      *
-     * @return void
+     * @return string
      */
-    public function getContentMD5()
+    public function getContentMD5(): string
     {
         return $this->_blobProperties->getContentMD5();
     }

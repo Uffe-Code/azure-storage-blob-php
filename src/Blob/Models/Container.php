@@ -102,7 +102,7 @@ class Container
      *
      * @return void
      */
-    public function setMetadata(array $metadata = null)
+    public function setMetadata(array|null $metadata = null)
     {
         $this->_metadata = $metadata;
     }
